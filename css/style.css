@@ -41,6 +41,11 @@ button{
 	width:100px;
 }
 
+#file_dropdown{
+	display:block;
+	width:100px;
+}
+
 #search{
 	margin-left: 140px;
 }
@@ -60,6 +65,12 @@ button{
 	text-align: center;
 }
 
+
+#stats_img{
+	display:inline;
+	height:350px;
+	width:500px;
+}
 img{
 	display: inline;
 	height:200px;
@@ -68,4 +79,8 @@ img{
 
 ul, li{
 	list-style: none;
+}
+
+.custom-height-modal{
+	height:500px;
 }

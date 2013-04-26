@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="./css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 </head>
 <br>
 <body>
 	<nav>
 		<button id="search" class="btn btn-primary">Search</button>
 		<button id="stats"  class="btn btn-primary">Stats</button>
+    <button class="btn btn-primary">Sample Hand</button>
     <div class="dropdown btn-group">
     <a id="sort_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         Sort
@@ -21,8 +22,17 @@
         <li><a id='col_sort'>Color</a></li>
         <li><a id='nam_sort'>Name</a></li>
     </ul>
-</div>
-		<button class="btn btn-primary">Sample Hand</button>
+    </div>
+    <div class="dropdown btn-group">
+      <a id="file_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        File
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a id="load">Load from File</id></a></li>
+        <li><a id="load">Save to File</id></a></li>
+      </ul>
+    </div>
 		<span id="total">Price:</span>
 	</nav>
 	<div id="content"></div>
@@ -33,9 +43,9 @@
       <div class="modal-header">
         <h3 id="myModalLabel">Search</h3>
       </div>
-    <div id="modal_body" class="modal-body">
+    <div id="modal_body" class="modal-body custom-height-modal">
       <div class="ui-widget">
-       <input type="text" id="searchbox" class="input-medium search-query" />
+       <input type="text" data-provide="typeahead" id="searchbox" class="input-medium search-query" data-source='["Forest", "Island", "Plains"]'/>
         <button id="modal_search" class="btn btn-primary">Search</button>
       </div>
     </div>
@@ -76,7 +86,7 @@
       </div>
     <div id="modal_body" class="modal-body">
       <div class="ui-widget">
-       <img id="stats_img" src='./images/stats.jpg'></img>
+       <img id="stats_img" src='./images/stats.jpg' height=></img>
       </div>
     </div>
       <div class="modal-footer">
@@ -86,6 +96,5 @@
 	<script src="./js/jquery-2.0.0.min.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
 	<script src="./js/script.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 </body>
 </html>

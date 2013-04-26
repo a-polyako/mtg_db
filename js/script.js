@@ -40,9 +40,7 @@ $(document).ready(function(){
 		$content.append(cards_html[searchData]);
 		$sr.html($content);
 	});
-	 $( "#searchbox" ).autocomplete({
-      source: availableTags
-    });
+	 $( ".typeahead").typeahead(availableTags)
 	 $('#add1').click(function(){
 	 	var seen = false;
 	 	var len = $('.'+ searchData).length;
@@ -183,8 +181,8 @@ $(document).ready(function(){
 });
 
 var cards_info ={
-	"Forest":{"cmc":0,"color":0,"name":"Forest"},
-	"Island":{"cmc":0,"color":0,"name":"Island"}
+	"Forest":{"cmc":0,"color":0,"name":"Forest","price":".05"},
+	"Island":{"cmc":0,"color":0,"name":"Island","price":".05"}
 }
 
 var cards_html ={

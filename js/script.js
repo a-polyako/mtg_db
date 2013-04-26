@@ -1,13 +1,13 @@
-var availableTags = [
-      "Forest",
-      "Island",
-      "Plains"
-];
+
 var tshift = 20;
 var lshift = 50;
 var searchData;
 var seenTypes = [];
 var deck = {};
+
+function ac_Values(){
+	return "[\"Forest\", \"Island\", \"Plains\"]";
+}
 
 function cmc_sort(card_a, card_b){
 	return(cards_info[card_a]["cmc"] - cards_info[card_b]["cmc"]);
@@ -40,7 +40,6 @@ $(document).ready(function(){
 		$content.append(cards_html[searchData]);
 		$sr.html($content);
 	});
-	 $( ".typeahead").typeahead(availableTags)
 	 $('#add1').click(function(){
 	 	var seen = false;
 	 	var len = $('.'+ searchData).length;

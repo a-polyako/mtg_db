@@ -10,7 +10,7 @@
 <body>
 	<nav>
 		<button id="search" class="btn btn-primary">Search</button>
-		<button class="btn btn-primary">Stats</button>
+		<button id="stats"  class="btn btn-primary">Stats</button>
     <div class="dropdown btn-group">
     <a id="sort_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         Sort
@@ -64,6 +64,19 @@
         <button id="cmc_sort" class="btn btn-primary">Converted Mana Cost</button>
         <button id="col_sort" class="btn btn-primary">Color</button>
         <button id="nam_sort" class="btn btn-primary">Name</button>
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+  </div>
+    <div id="stats_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <h3 id="myModalLabel">Deck Statistics</h3>
+      </div>
+    <div id="modal_body" class="modal-body">
+      <div class="ui-widget">
+       <img id="stats_img" src='./images/stats.jpg'></img>
       </div>
     </div>
       <div class="modal-footer">

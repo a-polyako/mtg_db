@@ -29,18 +29,19 @@
         <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
-        <li><a id="load">Load from File</id></a></li>
           <li class="dropdown-submenu">
-          <a tabindex="-1" href="#">More options</a>
+          <a tabindex="-1" href="#">Load from File</a>
            <ul class="dropdown-menu">
+                <li><a id="lgcy_fish">legacy_merfolk.dec</id></a></li>
+                <li><a id="std_uwr">standard_uwr.dec</id></a></li>
+                <li><a id="modrn_jund">modern_jund.dec</id></a></li>
           </ul>
         <li><a id="save">Save to File</id></a></li>
       </ul>
     </div>
-		<span id="total">Price:</span>
+		<span id="total">Total Price:</span>
 	</nav>
 	<div id="content"></div>
-	
 	</div>
   <!-- Modal -->
   <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -49,7 +50,8 @@
       </div>
     <div id="modal_body" class="modal-body custom-height-modal">
       <div class="ui-widget">
-       <input type="text" data-provide="typeahead" id="searchbox" class="input-medium search-query" data-source='["Forest", "Island", "Plains"]'/>
+       <input type="text" data-provide="typeahead" id="searchbox" class="input-medium search-query" autocomplete="off" 
+         data-source='["Forest","Island", "Plains", "Swamp", "Mountain"]'/>
         <button id="modal_search" class="btn btn-primary">Search</button>
       </div>
     </div>
@@ -92,6 +94,30 @@
       <div class="ui-widget">
        <img id="stats_img" src='./images/stats.jpg' height=></img>
       </div>
+    </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+    <div id="save_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <h3 id="myModalLabel">Save Deck As...</h3>
+      </div>
+    <div id="modal_body" class="modal-body">
+      <div class="ui-widget">
+       <input type="text" id="save_name_box" class="input-medium search-query" />
+       <button id="save_file" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+    <div id="saved_confirm_modal" class="modal hide fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <h3 id="results">Save Successful!</h3>
+      </div>
+    <div id="save_body" class="modal-body" value="">
     </div>
       <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

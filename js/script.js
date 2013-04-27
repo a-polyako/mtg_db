@@ -4,10 +4,8 @@ var lshift = 50;
 var searchData;
 var seenTypes = [];
 var deck = {};
+var save_name;
 
-function ac_Values(){
-	return "[\"Forest\", \"Island\", \"Plains\"]";
-}
 
 function cmc_sort(card_a, card_b){
 	return(cards_info[card_a]["cmc"] - cards_info[card_b]["cmc"]);
@@ -177,19 +175,64 @@ $(document).ready(function(){
 	 $("#stats").click(function(){
 	 	$("#stats_modal").modal('toggle');
 	 })
+	 $("#save").click(function(){
+	 	$("#save_modal").modal('toggle');
+	 })
+	 $("#save_file").click(function(){
+	 	save_name = $('#save_name_box').val();
+		$('#save_modal').modal('toggle');
+		$('#saved_confirm_modal').delay(2000).modal('show');
+	 })
+	 $('#saved_confirm_modal').on('shown', function(){
+	 	$('#save_modal').removeData("save_modal")
+		$sr = $('#save_body');
+		$content = $('<p>');
+		$content.append("File ");
+		$content.append(save_name);
+		$content.append(" saved!</p>");
+		$sr.html($content);
+	});
 });
 
 var cards_info ={
 	"Forest":{"cmc":0,"color":0,"name":"Forest","price":".05"},
-	"Island":{"cmc":0,"color":0,"name":"Island","price":".05"}
+	"Island":{"cmc":0,"color":0,"name":"Island","price":".05"},
+	"Mountain":{"cmc":0,"color":0,"name":"Mountain","price":".05"},
+	"Swamp":{"cmc":0,"color":0,"name":"Swamp","price":".05"},
+	"Plains":{"cmc":0,"color":0,"name":"Plains","price":".05"},
 }
 
 var cards_html ={
-	"Forest":"<img src='./images/forest.jpg' align='left' /><div><ul><li>Forest</li><li>Basic Land</li><li>({T}: Add {G} to your mana pool.))</li><li>Legal in Vintage (Type 1)<br/> Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/>Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/>Legal in Commander <br/>Legal in Modern</li></ul></div>",
-	"Island":"<img src='./images/island.jpg' align='left' /><div><ul><li>Island</li><li>Basic Land</li><li>({T}: Add {U} to your mana pool.))</li><li>Legal in Vintage (Type 1)<br/> Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/>Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/>Legal in Commander <br/>Legal in Modern</li></ul></div>"
+	"Forest":"<img src='./images/forest.jpg' align='left' /><div><ul><li>Forest</li><li>Basic Land</li> \
+<li>({T}: Add {G} to your mana pool.))</li> \
+<li>Legal in Vintage (Type 1)<br/> Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/> \
+Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/>Legal in Commander <br/> \
+Legal in Modern</li></ul></div>",
+	"Island":"<img src='./images/island.jpg' align='left' /><div><ul><li>Island</li><li>Basic Land</li> \
+<li>({T}: Add {U} to your mana pool.))</li><li>Legal in Vintage (Type 1)<br/> \
+Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/> \
+Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/> \
+Legal in Commander <br/>Legal in Modern</li></ul></div>",
+	"Plains":"<img src='./images/plains.jpg' align='left' /><div><ul><li>Island</li><li>Basic Land</li> \
+<li>({T}: Add {W} to your mana pool.))</li><li>Legal in Vintage (Type 1)<br/> \
+Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/> \
+Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/> \
+Legal in Commander <br/>Legal in Modern</li></ul></div>",
+	"Mountain":"<img src='./images/mountain.jpg' align='left' /><div><ul><li>Island</li><li>Basic Land</li> \
+<li>({T}: Add {R} to your mana pool.))</li><li>Legal in Vintage (Type 1)<br/> \
+Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/> \
+Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/> \
+Legal in Commander <br/>Legal in Modern</li></ul></div>",
+	"Swamp":"<img src='./images/swamp.jpg' align='left' /><div><ul><li>Island</li><li>Basic Land</li> \
+<li>({T}: Add {B} to your mana pool.))</li><li>Legal in Vintage (Type 1)<br/> \
+Legal in Legacy (Type 1.5)<br/>Legal in Extended (Type 1.X) <br/> \
+Legal in Standard (Type 2)<br/>Legal in Classic (MTGO) <br/> \
+Legal in Commander <br/>Legal in Modern</li></ul></div>"
 }
-
 var card_imgs = {
 	"Forest":"./images/forest.jpg",
-	"Island":"./images/island.jpg"
+	"Island":"./images/island.jpg",
+	"Plains":"./images/plains.jpg",
+	"Swamp":"./images/swamp.jpg",
+	"Mountain":"./images/mountain.jpg"
 }

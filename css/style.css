@@ -82,9 +82,5 @@ ul, li{
 }
 
 .custom-height-modal{
-	height:500px;
-}
-
-.cards_for_ac{
-	'["Forest","Island","Plains"']
+	height:150px;
 }

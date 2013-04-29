@@ -62,7 +62,7 @@ button{
 }
 
 #modal_body{
-	text-align: center;
+	text-align:center;
 }
 	
 #stats_img{
@@ -83,4 +83,13 @@ ul, li{
 
 .custom-height-modal{
 	height:150px;
+}
+
+.custom-width-shm{
+	width:1000px;
+		margin: 0 0 0 -500px;
+}
+
+.custom-height-shb{
+	height:500px;
 }

@@ -11,7 +11,7 @@
 	<nav>
 		<button id="search" class="btn btn-primary">Search</button>
 		<button id="stats"  class="btn btn-primary">Stats</button>
-    <button class="btn btn-primary">Sample Hand</button>
+    <button id="sample_hand" class="btn btn-primary">Sample Hand</button>
     <div class="dropdown btn-group">
     <a id="sort_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         Sort
@@ -39,7 +39,7 @@
         <li><a id="save">Save to File</id></a></li>
       </ul>
     </div>
-		<span id="total">Total Price:</span>
+		<div id="running_val"></div>
 	</nav>
 	<div id="content"></div>
 	</div>
@@ -123,6 +123,18 @@
         <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
       </div>
   </div>
+      <div id= "sample_hand_modal" class="modal hide fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <h3 id="results">Sample Hand</h3>
+      </div>
+    <div id="save_body" class="modal-body" value="">
+    </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Draw a Card</button>
+      </div>
+  </div>
+
 	<script src="./js/jquery-2.0.0.min.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
 	<script src="./js/script.js"></script>

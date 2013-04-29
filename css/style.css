@@ -50,9 +50,9 @@ button{
 	margin-left: 140px;
 }
 
-#total{
+#running_val{
 	float:right;
-	margin-right:250px;
+	margin-right:135px;
 	margin-top:3px;
 	margin-bottom:3px;
 	font-family:"HelveticaNeue-UltraLight", "Helvetica Neue Light",
@@ -64,16 +64,16 @@ button{
 #modal_body{
 	text-align: center;
 }
-
-
+	
 #stats_img{
 	display:inline;
 	height:350px;
 	width:500px;
 }
+
 img{
 	display: inline;
-	height:200px;
+	height:250px;
 	margin-right: 20px;
 }
 

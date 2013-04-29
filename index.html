@@ -34,12 +34,11 @@
           <a tabindex="-1" href="#">Load from File</a>
            <ul class="dropdown-menu">
                 <li><a id="lgcy_fish">legacy_merfolk.dec</id></a></li>
-                <li><a id="std_uwr">standard_uwr.dec</id></a></li>
-                <li><a id="modrn_jund">modern_jund.dec</id></a></li>
           </ul>
         <li><a id="save">Save to File</id></a></li>
       </ul>
     </div>
+    <button id="clear_deck" class="btn btn-primary">Clear Deck</button>
 		<div id="running_val"></div>
 	</nav>
 	<div id="content"></div>
@@ -54,7 +53,10 @@
     <div id="modal_body" class="modal-body custom-height-modal">
       <div class="ui-widget">
        <input type="text" data-provide="typeahead" id="searchbox" class="input-medium search-query" autocomplete="off" 
-         data-source='["Forest","Island", "Plains", "Swamp", "Mountain","Wasteland","Mutavault","Force of Will"]'/>
+         data-source='["Forest","Island", "Plains", "Swamp", "Mountain","Wasteland","Mutavault","Force of Will","Cursecatcher", 
+         "Silvergill Adept","Merrow Reejerey","Master of the Pearl Trident","Lord of Atlantis","Phantasmal Image","Daze", "Aether Vial",
+         "Standstill","Llanowar Elves", "Grizzly Bears","Giant Growth","Lightning Bolt","Stone Rain","Ball Lightning","Doom Blade",
+         "Festering Goblin","Wrath of God","Serra Angel","Savannah Lions"]'/>
         <button id="modal_search" class="btn btn-primary">Search</button>
       </div>
     </div>
@@ -96,9 +98,9 @@
       <div class="modal-header">
         <h3 id="myModalLabel">Deck Statistics</h3>
       </div>
-    <div id="modal_body" class="modal-body">
+    <div id="stats_modal_body" class="modal-body">
       <div class="ui-widget">
-       <img id="stats_img" src='./images/stats.jpg' height=></img>
+       <img id="stats_img" src='./images/stats.jpg'/>
       </div>
     </div>
       <div class="modal-footer">
